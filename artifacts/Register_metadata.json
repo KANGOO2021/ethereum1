@@ -1,0 +1,94 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getInfo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "myInfo",
+						"type": "string"
+					}
+				],
+				"name": "setInfo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Solange Gueiros",
+			"kind": "dev",
+			"methods": {
+				"getInfo()": {
+					"details": "retrieves the string of the state variable `storedInfo`",
+					"returns": {
+						"_0": "the stored string"
+					}
+				},
+				"setInfo(string)": {
+					"details": "stores the string in the state variable `storedInfo`",
+					"params": {
+						"myInfo": "the new string to store"
+					}
+				}
+			},
+			"title": "Storage string",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getInfo()": {
+					"notice": "Return the stored string"
+				},
+				"setInfo(string)": {
+					"notice": "Store `myInfo`"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Register.sol": "Register"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Register.sol": {
+			"keccak256": "0xe33cd172586b4bb1705b3c024a15171d00197ba7761501a8172d73a14ae40454",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://5c6b670f0c5c388a4eea8081f4a1b4661ed27234eaf7fce93549f79cb68f2f78",
+				"dweb:/ipfs/QmV8BgU4Z1KJXjNBDSfk3XnGjKx66xiLPb5kAQ4Z8hbgUX"
+			]
+		}
+	},
+	"version": 1
+}

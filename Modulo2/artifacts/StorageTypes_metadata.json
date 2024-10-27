@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "calldataVar",
+						"type": "uint256[]"
+					}
+				],
+				"name": "exampleFunction",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "storageVar",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Modulo2/Almacenamiento.sol": "StorageTypes"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Modulo2/Almacenamiento.sol": {
+			"keccak256": "0xab63cb67deed1f4f3dbdaddb5fcce41b211f5610a0a311f715a24ffca4a2aa2e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://feb142f667ffdf9a5339811a7605b663ab199b28492f121531b2ba30de245d3d",
+				"dweb:/ipfs/Qmas5exGLBUJb8dFBMf6Z5iAUPRhmT2tXTk7cnujUix4fF"
+			]
+		}
+	},
+	"version": 1
+}

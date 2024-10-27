@@ -1,0 +1,111 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getMaxVal",
+				"outputs": [
+					{
+						"internalType": "int8",
+						"name": "",
+						"type": "int8"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "greet",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "miEstado",
+				"outputs": [
+					{
+						"internalType": "enum HelloWorld.Estado",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "setMiEstadoAprobado",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "b",
+						"type": "uint8"
+					}
+				],
+				"name": "suma",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "c",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Modulo2/FuncionDeEstado.sol": "HelloWorld"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Modulo2/FuncionDeEstado.sol": {
+			"keccak256": "0x02b098d463b6883c2db34d77f29ee7ad8b3bee1ade95c4187030da50f14e913b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d88c1c8859452101cbac71aa6566b5fb275e3dd7a9ec20933953b09ddce24205",
+				"dweb:/ipfs/QmbQVQ1bpuUM8PRNqbdXuXnpELzX5hMcsZz4q3YKea96jd"
+			]
+		}
+	},
+	"version": 1
+}

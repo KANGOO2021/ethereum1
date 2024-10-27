@@ -1,0 +1,96 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "getInfo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "myInfo",
+						"type": "string"
+					}
+				],
+				"name": "setInfo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Solange Gueiros",
+			"kind": "dev",
+			"methods": {},
+			"title": "Concepts: Type address, msg.sender, owner, if",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"setInfo(string)": {
+					"notice": "La función setInfo verifica si quien envía la transacción es el dueño del contrato. Si es así, modifica el valor de la variable. Sino no hace nada."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Modulo2/Ejercicio4.sol": "Owner"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Modulo2/Ejercicio4.sol": {
+			"keccak256": "0x0d9bf91d11c382d597793ec2876ddec574a2ac232f599f02193be9bca1a886b4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9213c1a766a5405bdafa11d6780537f0ebbc90dbbb963972530a12cbb7f37861",
+				"dweb:/ipfs/QmQeL744ftaSCb8oik4jxfGHAkm1qycoKLFgCjbZBftbr1"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getInfoSergioX",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "myMessage",
+						"type": "string"
+					}
+				],
+				"name": "setInfoSergioX",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"smartContractSergioX.sol": "smartContractSergioX"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"smartContractSergioX.sol": {
+			"keccak256": "0x69e4a9c5c973384b60a6ca62b4050c7ac5b7e20df66719b9d0d5c88b39c1d017",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://725766a3d32c95bfb2e29f9af2dce2743a613705b0b2ce8588cb8cfb89e157b6",
+				"dweb:/ipfs/QmY2FBHNo1JCDxPfkpbJKbm7pGvNHjXr8ZgmqqmjueQuef"
+			]
+		}
+	},
+	"version": 1
+}

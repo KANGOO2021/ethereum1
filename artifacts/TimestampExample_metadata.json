@@ -1,0 +1,83 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "deploymentTimestamp",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "secondsPassed",
+						"type": "uint256"
+					}
+				],
+				"name": "hasTimePassed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"time.sol": "TimestampExample"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"time.sol": {
+			"keccak256": "0x06ad7dbd3c12fed7606d793c61a525519f7b798b73f1fc3e020c3d23b42b843d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://55f16f7645ed520cde5515d36bf3bdf747dda5a92f01899ecd176849d743e0d7",
+				"dweb:/ipfs/QmT3MLejPqatJFwDTbidnwiMwLYc15dEVzeBt2vhSiMC9G"
+			]
+		}
+	},
+	"version": 1
+}

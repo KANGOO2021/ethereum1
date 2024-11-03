@@ -35,25 +35,6 @@
 					{
 						"indexed": false,
 						"internalType": "address",
-						"name": "solicitante",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "monto",
-						"type": "uint256"
-					}
-				],
-				"name": "RetiroParcial",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "address",
 						"name": "ganador",
 						"type": "address"
 					},
@@ -75,6 +56,19 @@
 						"internalType": "bool",
 						"name": "",
 						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "comision",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -113,45 +107,10 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "historialOfertas",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "ofertante",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "cantidad",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "mejorOferta",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "ofertante",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "cantidad",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
+				"name": "finalizarSubasta",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -218,6 +177,30 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "ofertas",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "ofertante",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cantidad",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "porcentajeIncremento",
 				"outputs": [
@@ -232,7 +215,14 @@
 			},
 			{
 				"inputs": [],
-				"name": "retirarExcedente",
+				"name": "retirarDeposito",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retiroParcial",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -262,32 +252,6 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "ultimaOferta",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "verificarFinalizacionSubasta",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -303,7 +267,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"subasta5.sol": "Subasta"
+			"subasta2.sol": "Subasta"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -317,12 +281,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"subasta5.sol": {
-			"keccak256": "0x055f9946ad47758cc966f8165ff7e3795e7d8cdc0c9ca68edb803ad459305643",
+		"subasta2.sol": {
+			"keccak256": "0x2412a44fdf085bca057f18ff1f8f8dbe061b730e244f6f47bbe195df8140690f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://84ce9833ab4c1650e08a133afcebf0421770ec2671d6a56130ab798e92fb873d",
-				"dweb:/ipfs/QmcsRgdxfTBdDVZxe2c2U6mYdYQPdovpBYmrY5BvGCCfHk"
+				"bzz-raw://1239d4f14e37e0ae5c5429f7e0278ac2e18cd2c04354fb7635b14f74c07d1eee",
+				"dweb:/ipfs/QmevR5GZTR115XSxpw7coBReHwLCf8tJfvJs3VV5FQn9Lz"
 			]
 		}
 	},

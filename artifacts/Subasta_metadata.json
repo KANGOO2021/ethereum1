@@ -14,7 +14,7 @@
 				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": false,
+						"indexed": true,
 						"internalType": "address",
 						"name": "ofertante",
 						"type": "address"
@@ -41,7 +41,7 @@
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "cantidadGanadora",
+						"name": "cantidad",
 						"type": "uint256"
 					}
 				],
@@ -50,20 +50,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "activa",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "comision",
+				"name": "comisionGas",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -95,7 +82,14 @@
 			},
 			{
 				"inputs": [],
-				"name": "duracionSubasta",
+				"name": "devolverDepositos",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "extensionTiempo",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -114,17 +108,41 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "historialOfertas",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "ofertante",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cantidad",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "mostrarGanador",
 				"outputs": [
 					{
 						"internalType": "address",
-						"name": "ganador",
+						"name": "",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "cantidadGanadora",
+						"name": "",
 						"type": "uint256"
 					}
 				],
@@ -158,33 +176,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "ofertaInicial",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "ofertar",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "ofertas",
+				"name": "ofertaGanadora",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -202,6 +194,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "ofertar",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "porcentajeIncremento",
 				"outputs": [
 					{
@@ -215,16 +214,35 @@
 			},
 			{
 				"inputs": [],
-				"name": "retirarDeposito",
+				"name": "precioInicial",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retirarExceso",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "retiroParcial",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "subastaActiva",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -252,6 +270,19 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tiempoInicial",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -267,7 +298,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"subasta2.sol": "Subasta"
+			"subasta5.sol": "Subasta"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -281,12 +312,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"subasta2.sol": {
-			"keccak256": "0x2412a44fdf085bca057f18ff1f8f8dbe061b730e244f6f47bbe195df8140690f",
+		"subasta5.sol": {
+			"keccak256": "0xb3f3d77b6b67edc43ea1dcb02b85da6aa1ea54142383923165610024eb19b2c3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1239d4f14e37e0ae5c5429f7e0278ac2e18cd2c04354fb7635b14f74c07d1eee",
-				"dweb:/ipfs/QmevR5GZTR115XSxpw7coBReHwLCf8tJfvJs3VV5FQn9Lz"
+				"bzz-raw://1b67b58ec94c6a524430b723d93d29152d93ffc06012bc5e73cf398ffdc8e015",
+				"dweb:/ipfs/QmWi5mC9AixYM9FVpk3L6VZxcwwHEsL9SNA3k6Z33KsDWK"
 			]
 		}
 	},

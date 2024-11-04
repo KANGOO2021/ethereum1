@@ -6,13 +6,7 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_ofertaInicial",
-						"type": "uint256"
-					}
-				],
+				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -20,19 +14,38 @@
 				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": true,
+						"indexed": false,
 						"internalType": "address",
-						"name": "ofertante",
+						"name": "postor",
 						"type": "address"
 					},
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "monto",
+						"name": "oferta",
 						"type": "uint256"
 					}
 				],
-				"name": "NuevaOferta",
+				"name": "OfertaAceptada",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "postor",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "oferta",
+						"type": "uint256"
+					}
+				],
+				"name": "OfertaMejorada",
 				"type": "event"
 			},
 			{
@@ -47,7 +60,7 @@
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "montoGanador",
+						"name": "oferta",
 						"type": "uint256"
 					}
 				],
@@ -55,8 +68,14 @@
 				"type": "event"
 			},
 			{
-				"inputs": [],
-				"name": "comisionGas",
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "depositosAcumulados",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -82,19 +101,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "getOfertaMaxima",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -106,12 +112,12 @@
 				"outputs": [
 					{
 						"internalType": "address",
-						"name": "ofertante",
+						"name": "postor",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "monto",
+						"name": "cantidad",
 						"type": "uint256"
 					}
 				],
@@ -120,24 +126,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "mostrarOfertas",
+				"name": "mejorOferta",
 				"outputs": [
 					{
-						"components": [
-							{
-								"internalType": "address",
-								"name": "ofertante",
-								"type": "address"
-							},
-							{
-								"internalType": "uint256",
-								"name": "monto",
-								"type": "uint256"
-							}
-						],
-						"internalType": "struct Subasta.Oferta[]",
+						"internalType": "uint256",
 						"name": "",
-						"type": "tuple[]"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -145,11 +139,29 @@
 			},
 			{
 				"inputs": [],
-				"name": "ofertaMinima",
+				"name": "mejorPostor",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "address",
 						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ofertaGanadora",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "postor",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cantidad",
 						"type": "uint256"
 					}
 				],
@@ -164,8 +176,14 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "plazoExtension",
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "ofertasPendientes",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -178,22 +196,22 @@
 			},
 			{
 				"inputs": [],
-				"name": "retirarParcial",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "precioBase",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "subastaActiva",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
+				"name": "retirarOfertasPendientes",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -211,7 +229,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "tiempoFinalizacion",
+				"name": "tiempoFinalSubasta",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -236,7 +254,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"subasta6.sol": "Subasta"
+			"subasta7.sol": "Subasta"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -250,12 +268,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"subasta6.sol": {
-			"keccak256": "0xbc55fd9d159b6676b1280f1fb9c89c6ddc7adede9ca2a25a156dacc8ce5c6ea5",
+		"subasta7.sol": {
+			"keccak256": "0x0d0a4182e7f7ce0b1737395e6a9edf2eab72e4166cd76f5e193bafb97fda7a15",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4d93a0714144cc4b0a6508c5a0bf5836145aa61c465aad01ed5d04ae64c0f99b",
-				"dweb:/ipfs/QmdGgsFpb59LUMXoJzAGANsgkkdTvq1SxSjBB1wpEAjuUx"
+				"bzz-raw://985b05b174693923521f0435cb9d3464a4e2f4147a8b8beb27fc16daea6cf759",
+				"dweb:/ipfs/QmRy1AzjURbk74mj2uyFUb69vDvMB6FVKnUWKJvdvPAaqU"
 			]
 		}
 	},

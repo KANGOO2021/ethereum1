@@ -6,7 +6,13 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_initialBid",
+						"type": "uint256"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -22,7 +28,7 @@
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "winningAmount",
 						"type": "uint256"
 					}
 				],
@@ -50,12 +56,25 @@
 			},
 			{
 				"inputs": [],
-				"name": "auctionEndTime",
+				"name": "auctionActive",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "bool",
 						"name": "",
-						"type": "uint256"
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "auctioneer",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -76,7 +95,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "bids",
+				"name": "bidHistory",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -93,25 +112,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "deposits",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "endAuction",
 				"outputs": [],
@@ -120,20 +120,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "ended",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "extensionThreshold",
+				"name": "endTime",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -146,7 +133,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "extensionTime",
+				"name": "extensionPeriod",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -159,7 +146,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "highestBid",
+				"name": "gasCommission",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -172,20 +159,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "highestBidder",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "initialPrice",
+				"name": "getMaxBid",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -198,26 +172,27 @@
 			},
 			{
 				"inputs": [],
-				"name": "owner",
+				"name": "minimumBid",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "uint256",
 						"name": "",
-						"type": "address"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
+				"inputs": [],
 				"name": "partialWithdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "refundDeposits",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -246,31 +221,6 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "showWinner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "withdraw",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -286,7 +236,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"auction3.sol": "Auction"
+			"subasta7.sol": "Auction"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -300,12 +250,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"auction3.sol": {
-			"keccak256": "0x5d7fbbc5bae6f6e422c266f1a96149d647933f86b5b3a2ad816eab7d887d3b81",
+		"subasta7.sol": {
+			"keccak256": "0x0fdd669cb4ac123dc872ecc4411d8989867daeeb8074fa5e60c36785e1579e0f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://807d172340b42e6b32c194e01d1214be521fe35b4321a04fb6913fdf14774bfa",
-				"dweb:/ipfs/QmZN3rxZ3UiHJFvJY6Dy9L7HaHUiYtz5G9HzzkbxvumX3C"
+				"bzz-raw://7c5c62daad7d8e3997066330ccb4a58a3b7d0649aff827d03479d30d7f6d4271",
+				"dweb:/ipfs/QmQnWkfAJGy8MYz6bAmcGqZMFsGA9jP1BLuLndvgGqaEZD"
 			]
 		}
 	},

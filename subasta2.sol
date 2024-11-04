@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 contract Subasta {
     address public subastador;
     uint public tiempoFinal;
-    uint public duracionSubasta = 10 * 1 minutes;
+    uint public duracionSubasta = 1 * 1 minutes;
     //uint public extensionTiempo = 10 minutes;
     uint public porcentajeIncremento = 5; // 5% de incremento mínimo
     uint public comision = 2; // Comisión del 2% para el gas en reembolsos
@@ -61,14 +61,16 @@ contract Subasta {
         return ofertas;
     }
 
-    function finalizarSubasta() external soloSubastador soloDuranteSubastaActiva {
+    function finalizarSubasta() external soloSubastador {
         require(block.timestamp >= tiempoFinal, "La subasta aun esta en curso");
+        
         activa = false;
-
-        if (ofertas.length > 0) {
+        
+        /* if (ofertas.length > 0) {
             emit SubastaFinalizada(ofertas[ofertas.length - 1].ofertante, ofertas[ofertas.length - 1].cantidad);
-        }
+        } */
     }
+
 
     function retirarDeposito() external {
         require(!activa, "La subasta aun esta activa");
@@ -103,4 +105,6 @@ contract Subasta {
         depositos[msg.sender] -= excedente;
         payable(msg.sender).transfer(excedente);
     }
+
+    
 }

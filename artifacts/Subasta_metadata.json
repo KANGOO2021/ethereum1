@@ -6,7 +6,13 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_ofertaInicial",
+						"type": "uint256"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -22,7 +28,7 @@
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "cantidad",
+						"name": "monto",
 						"type": "uint256"
 					}
 				],
@@ -41,7 +47,7 @@
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "cantidad",
+						"name": "montoGanador",
 						"type": "uint256"
 					}
 				],
@@ -62,25 +68,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "depositos",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "devolverDepositos",
 				"outputs": [],
@@ -89,7 +76,14 @@
 			},
 			{
 				"inputs": [],
-				"name": "extensionTiempo",
+				"name": "finalizarSubasta",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getOfertaMaxima",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -98,13 +92,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "finalizarSubasta",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -124,25 +111,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "cantidad",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "mostrarGanador",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
+						"name": "monto",
 						"type": "uint256"
 					}
 				],
@@ -162,7 +131,7 @@
 							},
 							{
 								"internalType": "uint256",
-								"name": "cantidad",
+								"name": "monto",
 								"type": "uint256"
 							}
 						],
@@ -176,16 +145,11 @@
 			},
 			{
 				"inputs": [],
-				"name": "ofertaGanadora",
+				"name": "ofertaMinima",
 				"outputs": [
 					{
-						"internalType": "address",
-						"name": "ofertante",
-						"type": "address"
-					},
-					{
 						"internalType": "uint256",
-						"name": "cantidad",
+						"name": "",
 						"type": "uint256"
 					}
 				],
@@ -201,7 +165,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "porcentajeIncremento",
+				"name": "plazoExtension",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -214,20 +178,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "precioInicial",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "retirarExceso",
+				"name": "retirarParcial",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -260,20 +211,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "tiempoFinal",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "tiempoInicial",
+				"name": "tiempoFinalizacion",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -298,7 +236,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"subasta5.sol": "Subasta"
+			"subasta6.sol": "Subasta"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -312,12 +250,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"subasta5.sol": {
-			"keccak256": "0xb3f3d77b6b67edc43ea1dcb02b85da6aa1ea54142383923165610024eb19b2c3",
+		"subasta6.sol": {
+			"keccak256": "0xbc55fd9d159b6676b1280f1fb9c89c6ddc7adede9ca2a25a156dacc8ce5c6ea5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1b67b58ec94c6a524430b723d93d29152d93ffc06012bc5e73cf398ffdc8e015",
-				"dweb:/ipfs/QmWi5mC9AixYM9FVpk3L6VZxcwwHEsL9SNA3k6Z33KsDWK"
+				"bzz-raw://4d93a0714144cc4b0a6508c5a0bf5836145aa61c465aad01ed5d04ae64c0f99b",
+				"dweb:/ipfs/QmdGgsFpb59LUMXoJzAGANsgkkdTvq1SxSjBB1wpEAjuUx"
 			]
 		}
 	},

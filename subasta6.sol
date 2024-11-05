@@ -9,7 +9,7 @@ contract Subasta {
 
     address public subastador;
     uint public tiempoFinalizacion;
-    uint public plazoExtension = 1 * 20 seconds;
+    uint public plazoExtension = 30 seconds;
     uint public ofertaMinima;
     uint public comisionGas = 2; // 2%
     Oferta[] public historialOfertas;
@@ -62,10 +62,10 @@ contract Subasta {
 
     function devolverDepositos() external soloSubastador {
     require(!subastaActiva, "La subasta esta activa");
+    uint historialArray = historialOfertas.length;
+    address ganador = historialOfertas[historialArray - 1].ofertante;
 
-    address ganador = historialOfertas[historialOfertas.length - 1].ofertante;
-
-    for (uint i = 1; i < historialOfertas.length - 1; i++) { // Excluimos la última oferta (ganadora)
+    for (uint i = 1; i < historialArray - 1; i++) { // Excluimos la última oferta (ganadora)
         address ofertante = historialOfertas[i].ofertante;
         uint monto = historialOfertas[i].monto;
 
@@ -87,8 +87,8 @@ contract Subasta {
 
     function retirarParcial() external soloMientrasActiva {
         uint montoRetirar = 0;
-
-        for (uint i = 0; i < historialOfertas.length - 1; i++) {
+        uint historialArray = historialOfertas.length;
+        for (uint i = 0; i < historialArray - 1; i++) {
             if (historialOfertas[i].ofertante == msg.sender) {
                 montoRetirar += historialOfertas[i].monto;
                 delete historialOfertas[i]; // Remover oferta

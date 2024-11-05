@@ -1,7 +1,12 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity > 0.7.0 < 0.9.0;
 
-contract Auction {
+/// @title Final Work - Module 2 - Auction 
+/// @author Sergio Muñoz
+/// @notice This contract allows for the creation of an auction where participants can place bids.
+/// @dev This is a simple auction implementation with time extensions, bid history, and deposit refunds.
+
+contract AuctionSergio {
     // Structs
     struct Bid {
         address bidder;
@@ -11,9 +16,9 @@ contract Auction {
     // State variables
     address public auctioneer;
     uint public endTime;
-    uint public extensionPeriod = 30 seconds;
+    uint32 public extensionPeriod = 10 minutes;
     uint public minimumBid;
-    uint public gasCommission = 2; // 2%
+    uint8 public gasCommission = 2; // 2%
     bool public auctionActive;
     Bid[] public bidHistory;
 
@@ -59,15 +64,21 @@ contract Auction {
         auctionActive = false;
         address winner = bidHistory[bidHistory.length - 1].bidder;
         uint winningAmount = bidHistory[bidHistory.length - 1].amount;
+
+        // Transfer winning amount to the auctioneer
+        (bool success, ) = auctioneer.call{value: winningAmount}("");
+        require(success, "Transfer to auctioneer failed");
+
         emit AuctionEnded(winner, winningAmount);
     }
 
     function refundDeposits() external onlyAuctioneer {
         require(!auctionActive, "The auction is still active");
 
-        address winner = bidHistory[bidHistory.length - 1].bidder;
+        uint historialArray = bidHistory.length;
+        address winner = bidHistory[historialArray - 1].bidder;
 
-        for (uint i = 1; i < bidHistory.length - 1; i++) { // Excluding the last bid (winner)
+        for (uint i = 1; i < historialArray - 1; i++) { // Excluding the last bid (winner)
             address bidder = bidHistory[i].bidder;
             uint amount = bidHistory[i].amount;
 
@@ -87,8 +98,9 @@ contract Auction {
 
     function partialWithdraw() external onlyWhileActive {
         uint amountToWithdraw = 0;
+        uint historialArray = bidHistory.length;
 
-        for (uint i = 0; i < bidHistory.length - 1; i++) {
+        for (uint i = 0; i < historialArray - 1; i++) {
             if (bidHistory[i].bidder == msg.sender) {
                 amountToWithdraw += bidHistory[i].amount;
                 delete bidHistory[i]; // Remove bid

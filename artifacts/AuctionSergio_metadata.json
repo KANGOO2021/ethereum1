@@ -136,9 +136,9 @@
 				"name": "extensionPeriod",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "uint32",
 						"name": "",
-						"type": "uint256"
+						"type": "uint32"
 					}
 				],
 				"stateMutability": "view",
@@ -149,9 +149,9 @@
 				"name": "gasCommission",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "uint8",
 						"name": "",
-						"type": "uint256"
+						"type": "uint8"
 					}
 				],
 				"stateMutability": "view",
@@ -224,13 +224,17 @@
 			}
 		],
 		"devdoc": {
+			"author": "Sergio Muñoz",
+			"details": "This is a simple auction implementation with time extensions, bid history, and deposit refunds.",
 			"kind": "dev",
 			"methods": {},
+			"title": "Final Work - Module 2 - Auction ",
 			"version": 1
 		},
 		"userdoc": {
 			"kind": "user",
 			"methods": {},
+			"notice": "This contract allows for the creation of an auction where participants can place bids.",
 			"version": 1
 		}
 	},
@@ -251,11 +255,11 @@
 	},
 	"sources": {
 		"subasta7.sol": {
-			"keccak256": "0x851f3cb2493b465a90af089ba438ebf4cd1b91790466f38e49c430b876c6665e",
+			"keccak256": "0x9802e2b319fb51658be7dca13dd2280fc131fd6baae220ec2e03823b0fef8edd",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5b6500fe476e8f0eae912f1f4dae3fd6847a2fc275f6e473e3d412672459ae02",
-				"dweb:/ipfs/QmVzoyAAKnyowsJ8nMNZgmiEcb2xCVrJjTaf4vQbmgatHE"
+				"bzz-raw://7366addb5ff5dedf0798811e71bdad4ca4ee14338f75dd67b4f84762fc7fe533",
+				"dweb:/ipfs/QmZye47f8UGvWxbSeanbgkZujxxTFy5gfXUetZoCDeMbb1"
 			]
 		}
 	},

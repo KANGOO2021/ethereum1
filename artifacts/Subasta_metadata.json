@@ -62,19 +62,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "comision",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -107,10 +94,45 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "historialOfertas",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "ofertante",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cantidad",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
-				"name": "finalizarSubasta",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "mejorOferta",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "ofertante",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cantidad",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -177,30 +199,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "ofertas",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "ofertante",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "cantidad",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "porcentajeIncremento",
 				"outputs": [
@@ -211,20 +209,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "retirarDeposito",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "retiroParcial",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -252,6 +236,13 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "verificarFinalizacionSubasta",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -267,7 +258,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"subasta2.sol": "Subasta"
+			"subasta4.sol": "Subasta"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -281,12 +272,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"subasta2.sol": {
-			"keccak256": "0xbdc6e21be1699d8d22742f0f428db43ab1cbd877713d3b60d206d1b2e62ca7bc",
+		"subasta4.sol": {
+			"keccak256": "0x5e5afcb822bfd80e8c8f2ee3ba3aac50a2f6f237deb962946ab7724d3182f3b8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3dc58b4c714fb7d26845b051bf98f5648489230254f15e56c7b6b897852c9932",
-				"dweb:/ipfs/QmecxjxJnPMogkYUTppGm3YN6f5793fFdNa67jRQD4zMZF"
+				"bzz-raw://414e06e02208f9bfeadd9d83f960c23d7166e415462f178a8d41a4f8fa449674",
+				"dweb:/ipfs/QmTWBnLyh8fzijsLZDEE2sT6g8xkzkVPK7rXMgVkUaV6ed"
 			]
 		}
 	},

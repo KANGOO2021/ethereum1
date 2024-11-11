@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract Subasta {
+contract Subastasa {
     struct Oferta {
         address ofertante;
         uint monto;
@@ -9,7 +9,7 @@ contract Subasta {
 
     address public subastador;
     uint public tiempoFinalizacion;
-    uint public plazoExtension = 30 seconds;
+    uint public plazoExtension = 300 seconds;
     uint public ofertaMinima;
     uint public comisionGas = 2; // 2%
     Oferta[] public historialOfertas;

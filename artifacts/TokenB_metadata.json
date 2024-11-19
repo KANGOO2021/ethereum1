@@ -6,13 +6,7 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "initialSupply",
-						"type": "uint256"
-					}
-				],
+				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -428,7 +422,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"tokens.sol": "TokenB"
+			"tokenB.sol": "TokenB"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -482,12 +476,12 @@
 				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
 			]
 		},
-		"tokens.sol": {
-			"keccak256": "0xe15586ca11d512707dc1ddce2d8a6495cc723fb1ce5874cf98d3bf9e11050dd2",
+		"tokenB.sol": {
+			"keccak256": "0x5da9eb40a548e0f822444c2c0d8b33402b8666e75aead3a85619ec3920dc248a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://cf2ac1d7b999c2272fa4e32b08355592fe6c9aedc360814dc8250f7d2d2ea008",
-				"dweb:/ipfs/QmPBBM57KLfPzG2d2VPrjByG4sqe19D4BG5FCY7nXSfCi7"
+				"bzz-raw://eecb550698fe13cd76af80a2b2a6b57e1c436a0b1f61984eb8c5e3cc4db8216e",
+				"dweb:/ipfs/QmbsFEunzykcdtxVxrU3J5LfEH368CjBX8LaJWxJa9wPsn"
 			]
 		}
 	},

@@ -25,12 +25,6 @@
 				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "provider",
-						"type": "address"
-					},
-					{
 						"indexed": false,
 						"internalType": "uint256",
 						"name": "amountA",
@@ -49,12 +43,6 @@
 			{
 				"anonymous": false,
 				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "provider",
-						"type": "address"
-					},
 					{
 						"indexed": false,
 						"internalType": "uint256",
@@ -77,7 +65,7 @@
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "swapper",
+						"name": "user",
 						"type": "address"
 					},
 					{
@@ -134,19 +122,6 @@
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "owner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -262,7 +237,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"simpleDEX.sol": "SimpleDEX"
+			"simpleDEX2.sol": "SimpleDEX"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -284,12 +259,12 @@
 				"dweb:/ipfs/QmeTTxZ7qVk9rjEv2R4CpCwdf8UMCcRqDNMvzNxHc3Fnn9"
 			]
 		},
-		"simpleDEX.sol": {
-			"keccak256": "0x6eb8db37ac82e24009fee08927f25cbdb370a0ec1a9fa5786a15dde199f4bed5",
+		"simpleDEX2.sol": {
+			"keccak256": "0x941635975b1cf0cf8644f4b9f70005945d74eabf6dda44f915da56c025009e3f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3d1e27eb9f8bb051a5f5b7f3e8d7ef1aa8dac1ff161fbc7e3d51b6e075f599c7",
-				"dweb:/ipfs/QmZwFGfKreqk8uqBTL5U9BKoPUYbuks6S4RcHKreUYut6C"
+				"bzz-raw://186dc555934c38038637056b8371893b402400d8e565e850e57d84b901d9ab76",
+				"dweb:/ipfs/QmYbAgzrzFeXGFyoztErd26FTSX2RAC1PkQ2Jz8MChrXKg"
 			]
 		}
 	},

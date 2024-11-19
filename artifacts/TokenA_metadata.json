@@ -6,13 +6,7 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "initialSupply",
-						"type": "uint256"
-					}
-				],
+				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -483,11 +477,11 @@
 			]
 		},
 		"tokenA.sol": {
-			"keccak256": "0x6560e863835c94b1d74f97ebe74a57bd658ca2b0b530f2c62d9e64440ef2bbbe",
+			"keccak256": "0xcd0a158b2a94849a9770ab32d7c2065e26060054aa931810fda8991f85d3864b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://dceeaaf66e76940c4f5988ede37e703684b87471a7c4b4b58e33dd165d51ceb3",
-				"dweb:/ipfs/QmXZE7V9NJmu4bWgNjgSDzzwuy5nRDMSyGKrFgNpcuDAyY"
+				"bzz-raw://0c7a28f9b8f5e1cdd08585a4bd4a13fac24366e713142a89ceb091c9f1371bc6",
+				"dweb:/ipfs/QmSC9qSqT7uyzxsfxh4TynzhreHbPa7KZCsDF3MT4Vt7KS"
 			]
 		}
 	},
